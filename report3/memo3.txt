@@ -1,0 +1,15 @@
+p7
+・ライブラリの命名規則が欲しい（libで始めなくてはいけない）
+・-lの指定方法をもう少し詳しく（libの後ろの名前）
+・-lが区別しやすいフォントが良い
+・誤植
+　maincpp→main.cpp
+
+課題
+・$ g++ -shared -o libMessage3.so Message3.o
+　ではなく
+　$ g++ -fPIC -shared -o libMessage3.so Message3.o
+　としなければ動かなかった
+
+　-fPIC：再配置可能な位置に依存しないコード（Position Independent Code）
+　※実行時に任意のアドレスにロードされる可能性があるため-fPICが必要らしい

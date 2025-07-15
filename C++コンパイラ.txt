@@ -1,0 +1,12 @@
+MSYS2のインストール（g++(Min64-x64))
+https://www.msys2.org/
+
+pacman -Syu # パッケージマネージャを更新（途中で再起動する場合あり）
+pacman -Su # システムの残りのパッケージを更新
+pacman -S mingw-w64-x86_64-gcc
+
+「スタートメニュー」→「環境変数の編集」→「Path」→「編集」→新規追加：
+C:\msys64\mingw64\bin
+
+VSCodeなどで
+g++ --version

@@ -1,0 +1,8 @@
+6p
+・Eigenのインストール方法が欲しい
+　※既に全PCにインストール済みであれば必要ない
+　sudo apt install libeigen3-dev
+
+課題
+・gnuplot
+　gnuplot -persist plot.gp

@@ -1,0 +1,22 @@
+4p
+・2種類のキャストについて、詳しい情報が欲しい
+
+7p
+・extern、extern "C"の説明が欲しい
+
+10p
+・誤植
+　opedir→opendir
+　以下、誤植？
+　strcmp(file->d_name)→strcmp(file->d_name, ".")
+　strcmp(file->d_name)→strcmp(file->d_name, "..")
+
+課題5.1
+・ディレクトリ名というより相対パス？
+
+課題5.3
+・誤植？
+　virtual "PluginInterface()　→　virtual ~PluginInterface()　では？
+
+課題5.4
+・スマートポインタがうまくいかない
