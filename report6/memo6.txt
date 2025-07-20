@@ -1,0 +1,41 @@
+WSL GTK4インストール
+sudo apt update
+sudo apt install libgtk-4-dev pkg-config build-essential
+
+WindowsにXサーバーをインストール
+https://sourceforge.net/projects/vcxsrv/
+
+＝＝　Windows11の場合（WSLgを使う ＝＝
+Xサーバーチェック
+etern@yoyoYoga:/mnt/c/Users/etern/OneDrive/ドキュメント/技科大/TA/software2B/report6$ xeyes
+ウィンドウが出る
+→　OK
+
+GPUチェック
+etern@yoyoYoga:/mnt/c/Users/etern/OneDrive/ドキュメント/技科大/TA/software2B/report6$ gtk4-demo
+** Message: 11:36:19.331: For syntax highlighting, install the “highlight” program
+→　出ない
+→　GPU描画ができていない
+
+WSLgが動いているかチェック
+etern@yoyoYoga:/mnt/c/Users/etern/OneDrive/ドキュメント/技科大/TA/software2B/report6$ echo $WAYLAND_DISPLAY
+wayland-0
+→　OK
+
+Waylandで動いているか確認
+etern@yoyoYoga:/mnt/c/Users/etern/OneDrive/ドキュメント/技科大/TA/software2B/report6$ echo $GDK_BACKEND    
+何も出ない
+→　自動でWaylandを選ぶ
+
+強制的にX11で動かす
+etern@yoyoYoga:/mnt/c/Users/etern/OneDrive/ドキュメント/技科大/TA/software2B/report6$ GDK_BACKEND=x11 ./test
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI3: Screen seems not DRI3 capable
+MESA: error: ZINK: failed to choose pdev
+libEGL warning: egl: failed to create dri2 screen
+枠だけ出る
+
+CPUレンダリングに強制
+etern@yoyoYoga:/mnt/c/Users/etern/OneDrive/ドキュメント/技科大/TA/software2B/report6$ GSK_RENDERER=cairo ./
+image-viewer
+動く
